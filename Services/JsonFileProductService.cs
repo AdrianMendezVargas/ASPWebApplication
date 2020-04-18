@@ -29,5 +29,37 @@ namespace ASPWebApplication.Services {
             }
         }
 
+        public void AddRatings(string ProductId, int rating) {
+
+            var products = GetProducts();
+
+            var product = products.First(p => p.Id == ProductId);
+
+            if (product.Ratings == null) {
+
+                product.Ratings = new int[] { rating };
+
+            } else {
+
+                var ratings = product.Ratings.ToList();
+                ratings.Add(rating);
+                product.Ratings = ratings.ToArray();
+
+            }
+
+            using (var outputStream = File.OpenWrite(JsonFileName)) {
+
+                JsonSerializer.Serialize<IEnumerable<Product>>(
+                    new Utf8JsonWriter(outputStream , new JsonWriterOptions {
+                        SkipValidation = true,
+                        Indented = true
+                    }),
+                    products
+                    );
+
+            }
+
+        }
+
     }
 }
