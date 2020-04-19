@@ -29,7 +29,7 @@ namespace ASPWebApplication.Services {
             }
         }
 
-        public void AddRatings(string ProductId, int rating) {
+        public void AddRating(string ProductId, int rating) {
 
             var products = GetProducts();
 

@@ -31,7 +31,7 @@ namespace ASPWebApplication.Controllers
         public ActionResult Get(
             [FromQuery]string productId,
             [FromQuery]int rating) {
-            ProductService.AddRatings(productId , rating);
+            ProductService.AddRating(productId , rating);
             return Ok();
 
         }
