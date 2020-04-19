@@ -70,11 +70,9 @@
     string selectedProductId;
 
     void SelectProduct(string productId) {
-
         selectedProductId = productId;
-        selectedProduct = ProductService.GetProducts().First(p => p.Id == productId);
+        selectedProduct = ProductService.GetProducts().First(x => x.Id == productId);
         GetCurrentRating();
-
     }
 
     int currentRating = 0;
@@ -82,8 +80,7 @@
     string voteLabel;
 
     void GetCurrentRating() {
-
-        if (selectedProduct == null) {
+        if (selectedProduct.Ratings == null) {
             currentRating = 0;
             voteCount = 0;
         } else {
@@ -93,7 +90,6 @@
         }
 
         System.Console.WriteLine($"Current rating for {selectedProduct.Id}: {currentRating}");
-
     }
 
     void SubmitRating(int rating) {

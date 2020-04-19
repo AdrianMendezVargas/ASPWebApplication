@@ -64,7 +64,9 @@
     "Url": "https://twitter.com/sailorhg/status/1090122822007963648",
     "Title": "Pastel hardware kit",
     "Description": "Pastel hardware kits complete with custom manufactured pastel alligator clips.",
-    "Ratings": null
+    "Ratings": [
+      1
+    ]
   },
   {
     "Id": "sailorhg-led",
@@ -118,7 +120,18 @@
     "Url": "https://www.vogueandcode.com/shop/ruby-sis-2",
     "Title": "Ruby Sis",
     "Description": "Styled in a dashiki, Ruby Sis is listening to music while coding in her favorite language, Ruby!",
-    "Ratings": null
+    "Ratings": [
+      1,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ]
   },
   {
     "Id": "selinazawacki-moon",
